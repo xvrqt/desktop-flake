@@ -12,7 +12,7 @@ in
         # Screenshots
         "Mod+P".action = screenshot;
         "Mod+Alt+P".action = screenshot-window;
-        "Mod+Shift+P".action = screenshot-screen;
+        # "Mod+Shift+P".action = screenshot-screen;
       };
     };
   };
