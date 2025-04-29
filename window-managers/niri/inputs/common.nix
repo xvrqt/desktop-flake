@@ -1,10 +1,11 @@
-{
-  lib,
-  config,
-  ...
-}: let
+{ lib
+, config
+, ...
+}:
+let
   cfgCheck = config.desktops.window-manager == "niri";
-in {
+in
+{
   config = lib.mkIf cfgCheck {
     programs.niri.settings = {
       input = {
@@ -13,7 +14,7 @@ in {
         focus-follows-mouse = {
           enable = true;
           # Won't build despite conforming to the docs :s
-          #	max-scroll-amount = "0%";
+          max-scroll-amount = "0%";
         };
 
         # If you jump to the workspace you're currently viewing, it will take you to previous workspace
