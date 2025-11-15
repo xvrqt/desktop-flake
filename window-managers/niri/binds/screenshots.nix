@@ -10,8 +10,12 @@ in
     programs.niri.settings = {
       binds = with config.lib.niri.actions; {
         # Screenshots
-        "Mod+P".action = screenshot;
-        "Mod+Alt+P".action = screenshot-window;
+        "Mod+P".action.screenshot = {
+          show-pointer = false;
+        };
+        "Mod+Alt+P".action.screenshot-window = {
+          write-to-disk = false;
+        };
         # "Mod+Shift+P".action = screenshot-screen;
       };
     };
